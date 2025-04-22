@@ -22,5 +22,5 @@ db.on('disconnected',()=>{
     console.log('MongoDB server is disconnected');
 })
 
-//  now export the db connections
+//  commit add for testing perpose
 module.exports = db;
