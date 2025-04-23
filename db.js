@@ -1,7 +1,15 @@
 const mongoose = require("mongoose");
 
-// define mongodb connection URL
-const mongoURL = 'mongodb://localhost:27017/hotels'     // we can replace "hotels" with any other name
+// .env is used to save confidential information 
+require("dotenv").config()
+
+// define mongodb connection  local URL
+// const mongoURL = 'mongodb://localhost:27017/hotels'     // we can replace "hotels" with any other name
+// const mongoURL = process.env.local_url;
+
+// global url 
+// const mongoURL = "mongodb+srv://rohitbartwal957:Rohit89@cluster0.xuhtaos.mongodb.net/"
+const mongoURL = process.env.db_url;
 
 // setup mongoDB connection
 mongoose.connect(mongoURL)

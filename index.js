@@ -2,7 +2,9 @@ const express = require("express");
 const db = require("./db")
 
 const app = express();
-const port = 8000;
+
+require("dotenv").config();
+const port = process.env.port || 8000
 
 app.use(express.json());     // express.json parse the data and send it to the req.body
 
